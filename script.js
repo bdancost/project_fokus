@@ -8,6 +8,7 @@ const botoes = document.querySelectorAll(".app__card-button");
 const startPauseBt = document.querySelector("#start-pause");
 const musicaFocoInput = document.querySelector("#alternar-musica");
 const iniciarOuPausarBt = document.querySelector("#start-pause span");
+const volumeControl = document.querySelector("#volume-control");
 const iniciarOuPausarBtIcone = document.querySelector(
   ".app__card-primary-butto-icon"
 );
@@ -28,6 +29,13 @@ musicaFocoInput.addEventListener("change", () => {
   } else {
     musica.pause();
   }
+});
+
+// Define o volume inicial da música (0 a 1)
+musica.volume = volumeControl.value;
+// Atualiza o volume da música quando o controle deslizante muda
+volumeControl.addEventListener("input", (event) => {
+  musica.volume = event.target.value;
 });
 
 focoBt.addEventListener("click", () => {

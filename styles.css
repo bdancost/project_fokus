@@ -249,6 +249,30 @@ h6 {
   visibility: hidden;
 }
 
+.volume-musica {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  height: 0.6rem;
+  border-radius: 0.3rem;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.volume-musica::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--lils); /* Cor da bolinha */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
 /* fim - toggle */
 
 /* Para Tablets */
